@@ -12,11 +12,12 @@ Feature: Basketball
     And I have entered "passwordAgain" with value <passwordAgain>
     And I have agreed to Terms and Conditions
     And I have agreed to the CoC
-    Then I press the confirm button
+    And I press the confirm button
+    Then I should have signed up successfully
     Examples:
       | browser   | link                                                             | age          | firstName | lastName  | email                | emailAgain           | password   | passwordAgain |
-      | "chrome"  | "https://membership.basketballengland.co.uk/NewSupporterAccount" | "10/04/1990" | "Bodil"   | "Larsson" | "bodil4@larsson.com" | "bodil3@larsson.com" | "Bodil123" | "Bodil123"    |
-      | "firefox" | "https://membership.basketballengland.co.uk/NewSupporterAccount" | "10/04/1990" | "Bodil"   | "Larsson" | "bodil4@larsson.com" | "bodil3@larsson.com" | "Bodil123" | "Bodil123"    |
+      | "chrome"  | "https://membership.basketballengland.co.uk/NewSupporterAccount" | "10/04/1990" | "Bodil"   | "Larsson" | "bodil17@larsson.com" | "bodil17@larsson.com" | "Bodil123" | "Bodil123"    |
+      | "firefox" | "https://membership.basketballengland.co.uk/NewSupporterAccount" | "10/04/1990" | "Bodil"   | "Larsson" | "bodil18@larsson.com" | "bodil18@larsson.com" | "Bodil123" | "Bodil123"    |
 
   Scenario Outline: Sign up as a member without last name
     Given I have selected <browser> as browser
